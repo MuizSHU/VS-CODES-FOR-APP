@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest Food Recipe App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Greatest Food Recipes</h1>
+        <input type="text" id="searchInput" placeholder="Search for recipes..." onkeyup="searchRecipes()">
+    </header>
+
+    <div class="recipes-container" id="recipesContainer">
+        <div class="recipe" data-name="Spaghetti Carbonara">
+            <h2>Spaghetti Carbonara</h2>
+            <img src="https://via.placeholder.com/300x200" alt="Spaghetti Carbonara">
+            <p class="description">A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
+            <button onclick="showRecipeDetails('Spaghetti Carbonara')">See Recipe</button>
+        </div>
+
+        <div class="recipe" data-name="Chicken Curry">
+            <h2>Chicken Curry</h2>
+            <img src="https://via.placeholder.com/300x200" alt="Chicken Curry">
+            <p class="description">A flavorful and spicy dish made with chicken, curry spices, and coconut milk.</p>
+            <button onclick="showRecipeDetails('Chicken Curry')">See Recipe</button>
+        </div>
+
+        <div class="recipe" data-name="Caesar Salad">
+            <h2>Caesar Salad</h2>
+            <img src="https://via.placeholder.com/300x200" alt="Caesar Salad">
+            <p class="description">A fresh salad with lettuce, croutons, and Caesar dressing.</p>
+            <button onclick="showRecipeDetails('Caesar Salad')">See Recipe</button>
+        </div>
+
+        <!-- Add more recipes as needed -->
+    </div>
+
+    <div id="recipeDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="recipeTitle"></h2>
+            <p id="recipeIngredients"></p>
+            <p id="recipeInstructions"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
